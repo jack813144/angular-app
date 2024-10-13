@@ -1,0 +1,100 @@
+.user-list {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  tr:hover {
+    background-color: #f1f1f1;
+  }
+
+  // Đặt màu nền cho toàn bộ form
+.user-add {
+  background-color: #f9f9f9; // Màu nền nhẹ
+  border: 1px solid #ddd; // Đường viền nhạt
+  border-radius: 8px; // Bo tròn góc
+  padding: 20px; // Khoảng cách trong form
+  margin-top: 10px; // Khoảng cách phía trên
+
+  // Thay đổi kiểu cho nhãn
+  label {
+      display: block; // Hiển thị nhãn thành một khối
+      margin-bottom: 5px; // Khoảng cách dưới nhãn
+      font-weight: bold; // In đậm nhãn
+  }
+
+  // Thay đổi kiểu cho các trường input
+  input {
+      width: 100%; // Chiều rộng đầy đủ
+      padding: 10px; // Khoảng cách bên trong
+      border: 1px solid #ccc; // Đường viền nhạt
+      border-radius: 4px; // Bo tròn góc
+      box-sizing: border-box; // Đảm bảo padding không làm thay đổi kích thước
+
+      // Hiệu ứng khi người dùng tương tác
+      &:focus {
+          border-color: #007bff; // Đổi màu đường viền khi có focus
+          outline: none; // Tắt outline mặc định
+      }
+  }
+
+  // Thay đổi kiểu cho nút lưu
+  button[type="submit"] {
+      background-color: #007bff; // Màu nền nút
+      color: white; // Màu chữ
+      padding: 10px 15px; // Khoảng cách bên trong nút
+      border: none; // Tắt đường viền
+      border-radius: 4px; // Bo tròn góc
+      cursor: pointer; // Con trỏ chuột thay đổi khi hover
+
+      // Hiệu ứng khi hover
+      &:hover {
+          background-color: #0056b3; // Đổi màu nền khi hover
+      }
+
+      // Tắt hiệu ứng khi nút bị vô hiệu hóa
+      &[disabled] {
+          background-color: #ccc; // Màu nền nút khi bị vô hiệu hóa
+          cursor: not-allowed; // Con trỏ chuột thành không cho phép
+      }
+  }
+}
+
+// Nút thêm người dùng
+button[type="button"] {
+  background-color: #28a745; // Màu nền cho nút thêm người dùng
+  color: white; // Màu chữ
+  padding: 10px 15px; // Khoảng cách bên trong
+  border: none; // Tắt đường viền
+  border-radius: 4px; // Bo tròn góc
+  cursor: pointer; // Con trỏ chuột thay đổi khi hover
+
+  // Hiệu ứng khi hover
+  &:hover {
+      background-color: #218838; // Đổi màu nền khi hover
+  }
+}

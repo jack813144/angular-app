@@ -1,0 +1,41 @@
+<div>
+    <!-- <h1>User</h1> -->
+    
+    <div class="user-list">
+      <button type="button" (click)="setIsAddUser()">{{!isAddUser ? "Add User" : "Close"}}</button>
+      <div class="user-add" *ngIf="isAddUser">
+          <form (ngSubmit)="onSubmit()" #userForm="ngForm">
+              <div>
+                <label for="username">Username:</label>
+                <input id="username" [(ngModel)]="user.userName" name="username">
+              </div>
+              <div>
+                <label for="email">Email:</label>
+                <input id="email" [(ngModel)]="user.email" name="email" type="email">
+              </div>
+              <button type="submit" style="margin-top: 10px;" [disabled]="userForm.invalid">Save</button>
+          </form>
+      </div>
+        <h1>User List</h1>
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>User Name</th>
+              <th>Email</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let user of users">
+              <td>{{user.id}}</td>
+              <td>{{user.userName}}</td>
+              <td>{{user.email}}</td>
+              <td>
+                <button (click)="deleteUser(user.id)">Delete</button> <!-- Nút Delete -->
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+</div>

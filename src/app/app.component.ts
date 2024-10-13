@@ -4,11 +4,8 @@ import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [CommonModule, RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  standalone: true, // Đánh dấu AppComponent là standalone
+  template: `<router-outlet></router-outlet>`, // Sử dụng router outlet
+  imports: [RouterOutlet] // Đảm bảo RouterOutlet được import
 })
-export class AppComponent {
-  title = 'angular-app';
-}
+export class AppComponent {}
