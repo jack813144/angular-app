@@ -1,15 +1,15 @@
 import { Injectable } from '@angular/core';
-import { enviroment } from '../../../../enviroment';
 import { Observable } from 'rxjs';
 import { User } from '../model/user.model';
 import { HttpClient } from '@angular/common/http';
+import {environment } from '../../../environments/environment'
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
-  private MODULE_NAME = "user";
-  private API_URL = `${enviroment.apiUrl}${this.MODULE_NAME}`;
+  private MODULE_PATH = "/user";
+  private API_URL = `${environment.apiUrl}${this.MODULE_PATH}`;
   constructor(private http: HttpClient) { }
 
   getUserList(): Observable<User[]> {
